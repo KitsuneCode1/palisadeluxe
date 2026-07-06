@@ -108,7 +108,7 @@
                         <!-- LEFT -->
                         <div class="col-lg-8">
                             <div class="bg-light rounded-1 p-40">
-                                <form name="interior-estimator-form" id="interior-estimator-form" class="position-relative" method="post" action="https://madebydesignesia.com/themes/intrio/action-consultation.php">
+                                <form name="interior-estimator-form" id="interior-estimator-form" class="position-relative" method="post">
                                     <div class="row g-4">
 
                                         <!-- Name -->
@@ -128,76 +128,44 @@
                                         </div>
 
                                         <!-- Project Type -->
-                                        <div class="col-md-6">
-                                            <div class="field-set">
-                                                <label for="project_type">Project Type</label>
-                                                <div class="relative">
-                                                    <select id="project_type" name="project_type" class="form-control">
-                                                        <option value="">Select Project Type</option>
-                                                        <option>Living Room Design</option>
-                                                        <option>Bedroom Interior</option>
-                                                        <option>Kitchen Design</option>
-                                                        <option>Office Interior</option>
-                                                        <option>Apartment Renovation</option>
-                                                        <option>Full Home Interior</option>
-                                                    </select>
-                                                    <i class="absolute top-0 end-0 id-color pt-3 pe-3 icofont-simple-down"></i>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <select id="project_type" name="project_type" class="form-control">
+                                            <option value="">Select Project Type</option>
+                                            <option data-mult="0.8">Living Room Design</option>
+                                            <option data-mult="0.7">Bedroom Interior</option>
+                                            <option data-mult="1.1">Kitchen Design</option>
+                                            <option data-mult="0.9">Office Interior</option>
+                                            <option data-mult="1.2">Apartment Renovation</option>
+                                            <option data-mult="1.5">Full Home Interior</option>
+                                        </select>
 
                                         <!-- Property Size -->
-                                        <div class="col-md-6">
-                                            <div class="field-set">
-                                                <label for="property_size">Property Size</label>
-                                                <div class="relative">
-                                                    <select id="property_size" name="property_size" class="form-control">
-                                                        <option value="">Select Property Size</option>
-                                                        <option>Small (Under 50m²)</option>
-                                                        <option>Medium (50m² - 120m²)</option>
-                                                        <option>Large (120m² - 250m²)</option>
-                                                        <option>Luxury Residence (250m²+)</option>
-                                                    </select>
-                                                    <i class="absolute top-0 end-0 id-color pt-3 pe-3 icofont-simple-down"></i>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <select id="property_size" name="property_size" class="form-control">
+                                            <option value="">Select Property Size</option>
+                                            <option data-base="8000">Small (Under 50m²)</option>
+                                            <option data-base="18000">Medium (50m² - 120m²)</option>
+                                            <option data-base="35000">Large (120m² - 250m²)</option>
+                                            <option data-base="70000">Luxury Residence (250m²+)</option>
+                                        </select>
 
                                         <!-- Design Style -->
-                                        <div class="col-md-6">
-                                            <div class="field-set">
-                                                <label for="design_style">Design Style</label>
-                                                <div class="relative">
-                                                    <select id="design_style" name="design_style" class="form-control">
-                                                        <option value="">Select Style</option>
-                                                        <option>Modern Minimalist</option>
-                                                        <option>Contemporary</option>
-                                                        <option>Scandinavian</option>
-                                                        <option>Industrial</option>
-                                                        <option>Classic Luxury</option>
-                                                        <option>Japandi</option>
-                                                    </select>
-                                                    <i class="absolute top-0 end-0 id-color pt-3 pe-3 icofont-simple-down"></i>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <select id="design_style" name="design_style" class="form-control">
+                                            <option value="">Select Style</option>
+                                            <option data-mult="1.0">Modern Minimalist</option>
+                                            <option data-mult="1.05">Contemporary</option>
+                                            <option data-mult="1.0">Scandinavian</option>
+                                            <option data-mult="0.95">Industrial</option>
+                                            <option data-mult="1.3">Classic Luxury</option>
+                                            <option data-mult="1.1">Japandi</option>
+                                        </select>
 
                                         <!-- Timeline -->
-                                        <div class="col-md-6">
-                                            <div class="field-set">
-                                                <label for="timeline">Project Timeline</label>
-                                                <div class="relative">
-                                                    <select id="timeline" name="timeline" class="form-control">
-                                                        <option value="">Select Timeline</option>
-                                                        <option>Flexible</option>
-                                                        <option>1-3 Months</option>
-                                                        <option>3-6 Months</option>
-                                                        <option>Urgent Project</option>
-                                                    </select>
-                                                    <i class="absolute top-0 end-0 id-color pt-3 pe-3 icofont-simple-down"></i>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <select id="timeline" name="timeline" class="form-control">
+                                            <option value="">Select Timeline</option>
+                                            <option data-mult="1.0">Flexible</option>
+                                            <option data-mult="1.05">1-3 Months</option>
+                                            <option data-mult="1.0">3-6 Months</option>
+                                            <option data-mult="1.2">Urgent Project</option>
+                                        </select>
 
                                         <!-- Additional Services -->
                                         <div class="col-md-12">
@@ -206,42 +174,42 @@
 
                                                 <div class="col-md-4">
                                                     <div class="d-checkbox">
-                                                        <input id="furniture" name="services[]" type="checkbox" value="Furniture Selection">
+                                                        <input id="furniture" name="services[]" type="checkbox" value="Furniture Selection" data-cost="2500">
                                                         <label for="furniture">Furniture Selection</label>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-md-4">
                                                     <div class="d-checkbox">
-                                                        <input id="lighting" name="services[]" type="checkbox" value="Lighting Design">
+                                                        <input id="lighting" name="services[]" type="checkbox" value="Lighting Design" data-cost="1500">
                                                         <label for="lighting">Lighting Design</label>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-md-4">
                                                     <div class="d-checkbox">
-                                                        <input id="custom" name="services[]" type="checkbox" value="Custom Cabinetry">
+                                                        <input id="custom" name="services[]" type="checkbox" value="Custom Cabinetry" data-cost="4000">
                                                         <label for="custom">Custom Cabinetry</label>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-md-4">
                                                     <div class="d-checkbox">
-                                                        <input id="3d" name="services[]" type="checkbox" value="3D Visualization">
+                                                        <input id="3d" name="services[]" type="checkbox" value="3D Visualization" data-cost="1200">
                                                         <label for="3d">3D Visualization</label>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-md-4">
                                                     <div class="d-checkbox">
-                                                        <input id="decor" name="services[]" type="checkbox" value="Decor Styling">
+                                                        <input id="decor" name="services[]" type="checkbox" value="Decor Styling" data-cost="1800">
                                                         <label for="decor">Decor Styling</label>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-md-4">
                                                     <div class="d-checkbox">
-                                                        <input id="supervision" name="services[]" type="checkbox" value="Project Supervision">
+                                                        <input id="supervision" name="services[]" type="checkbox" value="Project Supervision" data-cost="3000">
                                                         <label for="supervision">Project Supervision</label>
                                                     </div>
                                                 </div>
@@ -282,11 +250,13 @@
                                     </div>
 
                                     <div id="success_message" class="success">
-                                        Your request has been submitted successfully. Our design team will contact you shortly.
+                                        <strong>Estimate generated!</strong> Based on your selections, your estimated project cost is
+                                        <strong id="estimate_amount"></strong>.
+                                        Our design team will follow up shortly with a detailed proposal.
                                     </div>
 
                                     <div id="error_message" class="error">
-                                        Sorry, there was an error sending your form.
+                                        Please select a <strong>Project Type</strong> and <strong>Property Size</strong> so we can calculate your estimate.
                                     </div>
 
                                 </form>
@@ -440,7 +410,7 @@
                 <h4>Contact Us</h4>
                 <div><i class="icofont-clock-time me-2 id-color"></i>Monday - Saturday 08.00 - 18.00</div>
                 <div><i class="icofont-location-pin me-2 id-color"></i>100 S Main St, New York, </div>
-                <div><i class="icofont-envelope me-2 id-color"></i>contact@Palisadeluxe.com</div>
+                <div><i class="icofont-envelope me-2 id-color"></i>contact@palisadeluxe.com</div>
 
                 <div class="spacer-30-line"></div>
 
@@ -508,7 +478,7 @@
 
                         <div class="widget">
                             <div class="op-5 fs-15">Email</div>
-                            <h3>contact@Palisadeluxe.com</h3>
+                            <h3>contact@palisadeluxe.com</h3>
 
                             <div class="spacer-20"></div>      
 
@@ -542,8 +512,61 @@
     ================================================== -->
     <script src="js/vendors.js"></script>
     <script src="js/designesia.js"></script>
-    <script src="js/validation-consultation.js"></script>
+    <!-- <script src="js/validation-consultation.js"></script> -->
+    <script>
+    (function () {
+        var form = document.getElementById('interior-estimator-form');
+        var successBox = document.getElementById('success_message');
+        var errorBox = document.getElementById('error_message');
+        var estimateAmountEl = document.getElementById('estimate_amount');
 
+        if (!form) return;
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+
+            successBox.style.display = 'none';
+            errorBox.style.display = 'none';
+
+            var propertySizeSelect = document.getElementById('property_size');
+            var projectTypeSelect = document.getElementById('project_type');
+            var designStyleSelect = document.getElementById('design_style');
+            var timelineSelect = document.getElementById('timeline');
+
+            var propertyOpt = propertySizeSelect.options[propertySizeSelect.selectedIndex];
+            var projectOpt = projectTypeSelect.options[projectTypeSelect.selectedIndex];
+            var styleOpt = designStyleSelect.options[designStyleSelect.selectedIndex];
+            var timelineOpt = timelineSelect.options[timelineSelect.selectedIndex];
+
+            if (!propertySizeSelect.value || !projectTypeSelect.value) {
+                errorBox.style.display = 'block';
+                errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
+
+            var base = parseFloat(propertyOpt.getAttribute('data-base')) || 10000;
+            var projectMult = parseFloat(projectOpt.getAttribute('data-mult')) || 1;
+            var styleMult = styleOpt ? (parseFloat(styleOpt.getAttribute('data-mult')) || 1) : 1;
+            var timelineMult = timelineOpt ? (parseFloat(timelineOpt.getAttribute('data-mult')) || 1) : 1;
+
+            var total = base * projectMult * styleMult * timelineMult;
+
+            var serviceCheckboxes = document.querySelectorAll('input[name="services[]"]:checked');
+            serviceCheckboxes.forEach(function (cb) {
+                total += parseFloat(cb.getAttribute('data-cost')) || 0;
+            });
+
+            var low = Math.round((total * 0.9) / 100) * 100;
+            var high = Math.round((total * 1.15) / 100) * 100;
+
+            estimateAmountEl.textContent = '$' + low.toLocaleString() + ' - $' + high.toLocaleString();
+
+            successBox.style.display = 'block';
+            successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    })();
+</script>
 </body>
 
 </html>
