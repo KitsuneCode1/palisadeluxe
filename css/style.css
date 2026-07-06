@@ -1285,8 +1285,6 @@ header.header-mobile {
 position: fixed !important;
 background: var(--heading-font-color);
 top: 0;
-padding-top: 10px;
-padding-bottom: 10px;
 }
 header.header-mobile .container {
 max-width: 100% !important;
@@ -10212,7 +10210,7 @@ margin-top: 50px;
 display: none;
 }
 header.logo-center{
-padding-top: 10px;
+padding-top: 0px;
 }
 .mt-sm-50{
 margin-top: 50px;
@@ -10230,6 +10228,9 @@ display: none;
 }
 header .logo-mobile {
 display: block;
+}
+header.header-mobile {
+  padding: 10px 0;
 }
 header .btn-main{
 display: none;
