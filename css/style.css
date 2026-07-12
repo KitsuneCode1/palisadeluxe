@@ -4422,6 +4422,9 @@ filter: grayscale(0);
 margin-bottom: 30px;
 padding-bottom: 30px;
 }
+.widget h4 {
+  text-transform: none;
+}
 footer .widget{
 margin-bottom: 0;
 }
